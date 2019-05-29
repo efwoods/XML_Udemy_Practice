@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/PassengerUseCase"
+	xmlns:tns="http://www.example.org/PassengerUseCase"
+	elementFormDefault="qualified">
+	
+	<element name="Passenger" type="tns:Passenger"/>
+	
+	<complexType name="Passenger">
+		<sequence>
+			<element name="name" type="string"/>
+			<element name="DOB" type="date"/>
+			<element name="SeatNo" type="int"/>
+			<element name="gender" type="string"/>
+		</sequence>
+	</complexType>
+</schema>

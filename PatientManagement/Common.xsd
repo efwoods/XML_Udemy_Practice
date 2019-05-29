@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/Common"
+	xmlns:tns="http://www.example.org/Common"
+	elementFormDefault="qualified"> <!-- the targetNamespace url is copied from patientmanagement.xsd but Common 
+		is left the same -->
+
+	<simpleType name="Id">
+		<restriction base="int">
+			<pattern value="[0-9]*" />
+		</restriction>
+	</simpleType>
+
+</schema>

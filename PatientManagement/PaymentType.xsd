@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/patientmanagement" 
+	xmlns:tns="http://www.example.org/patientmanagement"
+	elementFormDefault="qualified"> <!-- uses the other namespace -->
+
+	<complexType name="PaymentType">
+		<choice> <!-- only one element should occur -->
+			<element name="cash" type="decimal" />
+			<element name="insurance" type="tns:insurance" />
+		</choice>
+	</complexType>
+
+	<complexType name="insurance">
+		<all> <!-- all elements should occur but the order doesn't matter -->
+			<element name="provider" type="string" />
+			<element name="limit" type="decimal" />
+		</all>
+	</complexType>
+	
+
+</schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--  Holds the drivers license information -->
+<DriversLicense status="active">
+	<Number>13245
+	</Number>
+	<FirstName>
+		Greg
+	</FirstName>
+	<LastName>
+		Davey
+	</LastName>
+	<DateOfBirth>
+		05/01/2121
+	</DateOfBirth>
+	<VehicleType>
+		Tesla Model 3
+	</VehicleType>
+	<DateOfIssue>
+		05/29/2121
+	</DateOfIssue>
+	<![CDATA[
+	
+	Can include any text such as < > ' " &
+	
+	]]>
+	<ExpiryDate>
+		05/29/2035
+	</ExpiryDate>
+	<Photo location="servername/filename"/>
+	<Address>
+		<street>1234 Martin Luther King Jr Blvd.</street>
+		<city>New York</city>
+		<state>New York</state>
+		<country>U.S.</country>
+		<zip>12345</zip>
+	</Address>
+</DriversLicense>

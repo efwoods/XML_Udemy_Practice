@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Patient
+	xmlns:tns="http://www.example.org/patientmanagement"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/patientmanagement patientmanagement.xsd " id="5">
+	<tns:name>Greg</tns:name>
+	<tns:age>37</tns:age>
+	<tns:gender>M</tns:gender>
+	<tns:phone>8434567788</tns:phone>
+	<tns:phone>8434567788</tns:phone>
+	<tns:phone>8434567788</tns:phone>
+	<tns:paymentType>
+		<tns:insurance>
+			<tns:limit>10000</tns:limit>
+			<tns:provider>Blue Cross Blue Shield</tns:provider>
+		</tns:insurance>
+	</tns:paymentType>
+</tns:Patient>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Passenger
+	xmlns:tns="http://www.example.org/PassengerUseCase"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/PassengerUseCase PassengerUseCase.xsd ">
+	<tns:name>tns:name</tns:name>
+	<tns:DOB>2001-01-01</tns:DOB>
+	<tns:SeatNo>0</tns:SeatNo>
+	<tns:gender>tns:gender</tns:gender>
+</tns:Passenger>

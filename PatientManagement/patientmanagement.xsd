@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/patientmanagement"
+	xmlns:tns="http://www.example.org/patientmanagement" xmlns:Common="http://www.example.org/Common"
+	elementFormDefault="qualified"> <!--  unqualified removes the tns: prefix necessity -->
+	
+	<include schemaLocation="PaymentType.xsd"/> <!-- allows the schema to be dispersed into two separate files -->
+	<import schemaLocation="Common.xsd" namespace="http://www.example.org/Common"/>
+	<element name="Patient" type="tns:Patient"/>
+	
+	<complexType name="Patient">
+		<sequence>
+			<element name="name" type="tns:String15Chars"/>
+			<element name="age" type="int"/>
+			<element name="email" type="string" minOccurs="0"/> <!-- minOccurs allows email to be optional -->
+			<element name="gender" type="tns:Gender"/>
+			<element name="phone" type="string" maxOccurs="3"/> <!-- maxOccurs allows the phone to be given 3 times at most; set to unbounded for infinite number of phone numbers -->
+			<element name="paymentType" type="tns:PaymentType"/>
+		</sequence>
+		
+		<attribute name="id" type="Common:Id" use="required"/> <!-- adds the ability to list an id on the patient and 'required' makes the id required -->
+		<!-- notice the type="Common:Id";-->
+		<!-- added the xmlns in the schema above and included the targetNamespace from the Common.xsd file to use the simpleType in that file -->
+		<!-- also added the import on line 8 to import the schema for use in this file -->
+	</complexType>
+	
+	
+	
+	<complexType name="PaymentType">
+		<choice> <!-- only one element should occur -->
+			<element name="cash" type="decimal"/>
+			<element name="insurance" type="tns:insurance"/>
+		</choice>
+	</complexType>
+	
+	<complexType name="insurance">
+		<all> <!-- all elements should occur but the order doesn't matter -->
+			<element name="provider" type="string"/>
+			<element name="limit" type="decimal"/>
+		</all>
+	</complexType>
+	
+	
+	
+	<simpleType name="String15Chars">
+		<restriction base="string">
+			<maxLength value="15"/>
+		</restriction>
+	</simpleType>
+	
+	<simpleType name="Gender">
+		<restriction base="string">
+			<enumeration value="M"/>
+			<enumeration value="F"/>
+		</restriction>
+	</simpleType>
+</schema>
